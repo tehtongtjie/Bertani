@@ -1,14 +1,12 @@
-// Toggle class active
+const menu = document.querySelector("#menu");
 const navbarNav = document.querySelector(".navbar-nav");
 
-//when menu click
-document.querySelector("#menu").onclick = () => {
+// Toggle menu saat tombol diklik
+menu.addEventListener("click", function () {
   navbarNav.classList.toggle("active");
-};
+});
 
-// click dluar sidebar menghilangkan nav
-const menu = document.querySelector("#menu");
-
+// Tutup menu jika klik di luar sidebar
 document.addEventListener("click", function (e) {
   if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
