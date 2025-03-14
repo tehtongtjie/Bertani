@@ -1,134 +1,136 @@
-<h3>Daftar</h3>
-
-<form action="" method="POST">
-  <table>
-    <tr>
-      <td><label for="nama">Nama</label></td>
-      <td>:</td>
-      <td><input type="text" name="nama" id="nama" required /></td>
-    </tr>
-    <tr>
-      <td><label for="tgl_lahir">Tanggal Lahir</label></td>
-      <td>:</td>
-      <td><input type="date" name="tgl_lahir" id="tgl_lahir" required /></td>
-    </tr>
-    <tr>
-      <td>Jenis Kelamin</td>
-      <td>:</td>
-      <td>
-        <input
-          type="radio"
-          name="jk"
-          value="Laki-laki"
-          id="laki-laki"
-          required
-        />
-        <label for="laki-laki">Laki-laki</label>
-        <input
-          type="radio"
-          name="jk"
-          value="Perempuan"
-          id="perempuan"
-          required
-        />
-        <label for="perempuan">Perempuan</label>
-      </td>
-    </tr>
-    <tr>
-      <td><label for="domisili">Domisili (Provinsi)</label></td>
-      <td>:</td>
-      <td>
-        <select name="domisili" id="domisili" required>
-          <option value="" disabled selected>Pilih Provinsi</option>
-          <option value="Aceh">Aceh</option>
-          <option value="Sumatera Utara">Sumatera Utara</option>
-          <option value="Sumatera Barat">Sumatera Barat</option>
-          <option value="Riau">Riau</option>
-          <option value="Kepulauan Riau">Kepulauan Riau</option>
-          <option value="Jambi">Jambi</option>
-          <option value="Sumatera Selatan">Sumatera Selatan</option>
-          <option value="Bangka Belitung">Bangka Belitung</option>
-          <option value="Bengkulu">Bengkulu</option>
-          <option value="Lampung">Lampung</option>
-          <option value="DKI Jakarta">DKI Jakarta</option>
-          <option value="Jawa Barat">Jawa Barat</option>
-          <option value="Banten">Banten</option>
-          <option value="Jawa Tengah">Jawa Tengah</option>
-          <option value="DI Yogyakarta">DI Yogyakarta</option>
-          <option value="Jawa Timur">Jawa Timur</option>
-          <option value="Bali">Bali</option>
-          <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
-          <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
-          <option value="Kalimantan Barat">Kalimantan Barat</option>
-          <option value="Kalimantan Tengah">Kalimantan Tengah</option>
-          <option value="Kalimantan Selatan">Kalimantan Selatan</option>
-          <option value="Kalimantan Timur">Kalimantan Timur</option>
-          <option value="Kalimantan Utara">Kalimantan Utara</option>
-          <option value="Sulawesi Utara">Sulawesi Utara</option>
-          <option value="Gorontalo">Gorontalo</option>
-          <option value="Sulawesi Tengah">Sulawesi Tengah</option>
-          <option value="Sulawesi Selatan">Sulawesi Selatan</option>
-          <option value="Sulawesi Barat">Sulawesi Barat</option>
-          <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
-          <option value="Maluku">Maluku</option>
-          <option value="Maluku Utara">Maluku Utara</option>
-          <option value="Papua">Papua</option>
-          <option value="Papua Barat">Papua Barat</option>
-          <option value="Papua Tengah">Papua Tengah</option>
-          <option value="Papua Pegunungan">Papua Pegunungan</option>
-          <option value="Papua Selatan">Papua Selatan</option>
-          <option value="Papua Barat Daya">Papua Barat Daya</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td><label for="email">Email</label></td>
-      <td>:</td>
-      <td><input type="email" name="email" id="email" required /></td>
-    </tr>
-    <tr>
-      <td><label for="password">Password</label></td>
-      <td>:</td>
-      <td><input type="password" name="password" id="password" required /></td>
-    </tr>
-    <tr>
-      <td><label for="password2">Konfirmasi Password</label></td>
-      <td>:</td>
-      <td>
-        <input type="password" name="password2" id="password2" required />
-      </td>
-    </tr>
-    <tr>
-      <td>Pilihan Peran</td>
-      <td>:</td>
-      <td>
-        <input type="radio" name="peran" value="Petani" id="petani" required />
-        <label for="petani">Petani</label>
-        <input
-          type="radio"
-          name="peran"
-          value="Penjual Pupuk"
-          id="penjual-pupuk"
-          required
-        />
-        <label for="penjual-pupuk">Penjual Pupuk</label>
-        <input
-          type="radio"
-          name="peran"
-          value="Pemilik Lahan"
-          id="pemilik-lahan"
-          required
-        />
-        <label for="pemilik-lahan">Pemilik Lahan</label>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3" style="text-align: center; padding-top: 10px">
-        <button type="submit">Daftar</button>
-        <button type="button" onclick="window.location.href='index.html'">
-          Kembali
-        </button>
-      </td>
-    </tr>
-  </table>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/daftar.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Daftar</div>
+      <div class="content">
+        <form action>
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nama Lengkap</span>
+              <input type="text" placeholder="Masukkan Nama" required>
+            </div>
+            <div class="gender-details">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label>
+                  <input type="radio" name="gender" value="Male" required />
+                  Laki-laki
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="Female" required />
+                  Perempuan
+                </label>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Tanggal Lahir</span>
+              <input type="date" placeholder="" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Provinsi</span>
+              <select name="provinsi" id="provinsi" required>
+                <option value="" disabled selected>Pilih Provinsi</option>
+                <option value="Aceh">Aceh</option>
+                <option value="Sumatera Utara">Sumatera Utara</option>
+                <option value="Sumatera Barat">Sumatera Barat</option>
+                <option value="Riau">Riau</option>
+                <option value="Kepulauan Riau">Kepulauan Riau</option>
+                <option value="Jambi">Jambi</option>
+                <option value="Sumatera Selatan">Sumatera Selatan</option>
+                <option value="Bangka Belitung">Bangka Belitung</option>
+                <option value="Bengkulu">Bengkulu</option>
+                <option value="Lampung">Lampung</option>
+                <option value="DKI Jakarta">DKI Jakarta</option>
+                <option value="Jawa Barat">Jawa Barat</option>
+                <option value="Banten">Banten</option>
+                <option value="Jawa Tengah">Jawa Tengah</option>
+                <option value="DI Yogyakarta">DI Yogyakarta</option>
+                <option value="Jawa Timur">Jawa Timur</option>
+                <option value="Bali">Bali</option>
+                <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                <option value="Kalimantan Barat">Kalimantan Barat</option>
+                <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                <option value="Kalimantan Timur">Kalimantan Timur</option>
+                <option value="Kalimantan Utara">Kalimantan Utara</option>
+                <option value="Sulawesi Utara">Sulawesi Utara</option>
+                <option value="Gorontalo">Gorontalo</option>
+                <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                <option value="Sulawesi Barat">Sulawesi Barat</option>
+                <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                <option value="Maluku">Maluku</option>
+                <option value="Maluku Utara">Maluku Utara</option>
+                <option value="Papua">Papua</option>
+                <option value="Papua Barat">Papua Barat</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <span class="details">Kabupaten/Kota</span>
+              <input type="text" placeholder="Masukkan Kabupaten/Kota" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Kecamatan</span>
+              <input type="text" placeholder="Masukkan Kecamatan" required>
+            </div>         
+            <div class="input-box">
+              <span class="details">Kel/Desa</span>
+              <input type="text" placeholder="Masukkan Kel/Desa" required>
+            </div> 
+            <div class="input-box">
+              <span class="details">Kode Pos</span>
+              <input type="text" placeholder="Masukkan Kode Pos" required>
+            </div>  
+            <div class="input-box">
+              <span class="details">Alamat Lengkap</span>
+              <input type="text" placeholder="Masukkan Alamat" required>
+            </div>          
+            <div class="input-box">
+              <span class="details">Alamat Email</span>
+              <input type="email" placeholder="Masukkan email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">No. Hp</span>
+            <input type="text" placeholder="Masukkan No.Hp" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Masukkan Password" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Konfirmasi Password</span>
+          <input type="password" placeholder="Tulis Ulang Password" required>
+      </div>
+      <div class="work-details">
+        <span class="work-title">Pekerjaan</span>
+        <div class="category">
+          <label>
+            <input type="radio" name="work" value="Petani" required />
+            Petani
+          </label>
+          <label>
+            <input type="radio" name="work" value="Penjual Pupuk" required />
+            Penjual Pupuk
+          </label>
+          <label>
+            <input type="radio" name="work" value="Pemilik Lahan" required />
+            Pemilik Lahan
+          </label>
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Daftar">
+      </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
