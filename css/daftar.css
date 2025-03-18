@@ -1,180 +1,160 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
+  height: 100%;
+  overflow: hidden; /* Mencegah scroll */
+  background: #f4f4f4;
+}
+
+.regis {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #008a21;
-  background-image: linear-gradient(132deg, #008a21 0%, #16a085 78%);
+  align-items: stretch; /* Pastikan semua elemen memenuhi tinggi penuh */
 }
 
-.container {
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 20px 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-.container .title {
-  font-size: 28px;
-  font-weight: 700;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.container .title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  height: 3px;
-  width: 40px;
-  border-radius: 5px;
-  background-color: #f4d03f;
-  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
-}
-
-.user-details {
+.regis .row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+  width: 100%;
+  height: 100%;
 }
 
-.user-details .input-box {
-  width: calc(100% / 2 - 20px);
-  margin-bottom: 15px;
+/* Bagian Gambar */
+.regis .row .regis-video {
+  flex: 1 1 50%;
+  max-width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.input-box span.details {
+.regis .row .regis-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bagian Form */
+.regis .row .regis-form {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.regis-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.regis-form h2 span {
+  color: #005b15;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.input-box input,
-.input-box select {
-  height: 45px;
+.input-group input {
   width: 100%;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
+  padding: 10px;
   border: 1px solid #ccc;
-  transition: 0.3s;
-}
-
-.input-box input:focus,
-.input-box select:focus {
-  border-color: #008a21;
-}
-
-/* --- Styling Radio Button (Gender & Work) --- */
-.radio-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.radio-group span {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.radio-group .category {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.radio-group label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  gap: 8px;
-}
-
-.radio-group input[type="radio"] {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #16a085;
-  border-radius: 50%;
-  position: relative;
-}
-
-.radio-group input[type="radio"]:checked {
-  background-color: #16a085;
-  border: 5px solid white;
-  box-shadow: 0 0 0 2px #16a085;
-}
-
-.radio-group input[type="radio"]::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-  display: none;
-}
-
-.radio-group input[type="radio"]:checked::before {
-  display: block;
-}
-
-/* --- Tombol Submit --- */
-.button {
-  height: 45px;
-  margin: 20px 0;
-}
-
-.button input {
-  width: 100%;
-  height: 100%;
   border-radius: 5px;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row; /* Tombol dalam satu baris */
+  gap: 10px; /* Jarak antar tombol */
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  font-size: 1rem;
   border: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  border-radius: 5px;
   cursor: pointer;
-  background-color: #f4d03f;
-  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
-  transition: 0.3s;
+  transition: background 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none; /* Untuk menghilangkan underline di tombol "Kembali" */
 }
 
-.button input:hover {
-  background: #16a085;
+.btn:hover {
+  background: #646464;
 }
 
-/* --- Responsif untuk Layar Kecil --- */
-@media (max-width: 580px) {
-  .container {
-    max-width: 100%;
-  }
+.btn-kembali {
+  background: #ff0000;
+}
 
-  .user-details .input-box {
-    width: 100%;
-  }
+.btn-kembali:hover {
+  background: #646464;
+}
 
-  .content .user-details {
-    max-height: 300px;
-    overflow-y: scroll;
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
   }
 }
 
-@media (max-width: 459px) {
-  .container .content .category {
-    flex-direction: column;
+/* Tablet */
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .regis .row {
+      flex-direction: column;
+    }
+
+    .regis .row .regis-img {
+      max-width: 100%;
+      height: 250px; /* Atur tinggi gambar untuk tampilan mobile */
+    }
+
+    .regis .row .regis-img img {
+      object-position: center;
+    }
+
+    .regis .row .regis-form {
+      max-width: 100%;
+      height: auto;
+      padding: 2rem;
+    }
+  }
+
+  /* Mobile Phone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+
+    .regis .row .regis-form {
+      padding: 1.5rem;
+    }
+
+    .btn {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
   }
 }
