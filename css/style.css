@@ -166,7 +166,7 @@ body {
 .about .row .about-video video {
   width: 100%;
   display: block;
-  transition: transform 0.3s ease-in-out; /* Efek hover */
+  transition: transform 0.3s ease-in-out;
 }
 
 .about .row .about-video video:hover {
@@ -190,6 +190,105 @@ body {
   line-height: 1.6;
 }
 
+/* shop section */
+.shop {
+  padding: 6rem 5% 1.4rem;
+}
+
+.shop h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.shop h2 span {
+  color: var(--primary);
+}
+
+.shop .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.shop .row .shop-img {
+  position: relative;
+  flex: 1 1 28rem;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .row .shop-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
+}
+
+.shop .row .shop-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.shop .row .product {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+/* Styling Tabel */
+.product-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-table th,
+.product-table td {
+  border: 2px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.product-table th {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #000000;
+}
+
+.product-table tr:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.shop .product .cta {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 0.5em 4rem;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px rgba(1, 1, 3, 0.5);
+}
+/* product section end */
+
 /* Media Queries */
 
 /* Laptop */
@@ -209,6 +308,7 @@ body {
     display: inline-block;
   }
 
+  /* Navbar Responsif */
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -216,7 +316,11 @@ body {
     background-color: #fff;
     width: 30rem;
     height: 100vh;
-    transition: 0.3s;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
   }
 
   .navbar .navbar-nav.active {
@@ -227,8 +331,10 @@ body {
     color: var(--bg);
     display: block;
     margin: 1.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 2rem;
+    text-align: center;
+    width: 100%;
   }
 
   .navbar .navbar-nav a::after {
@@ -239,21 +345,67 @@ body {
     transform: scaleX(0.2);
   }
 
+  /* About Section */
   .about .row {
+    display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about .row .about-video {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .about .row .about-video video {
-    height: 24rem;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
-    object-position: center;
+    border-radius: 15px;
   }
 
   .about .row .content {
-    padding: 0;
+    flex: 1 1 100%;
+    padding: 1rem;
   }
 
   .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .shop .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shop .row .shop-img {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .shop .row .shop-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .shop .row .product {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+
+  .shop .row .product h3 {
     margin-top: 1rem;
     font-size: 2rem;
   }
